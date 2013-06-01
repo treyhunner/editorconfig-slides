@@ -25,9 +25,6 @@
 		http://msdn.microsoft.com/en-us/library/ie/hh772069%28v=vs.85%29.aspx
 */
 #demo .contents {
-  font-size: 14px;
-  line-height: 20px;
-  width: 800px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -39,7 +36,10 @@
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  width: 800px;
+  font-size: 14.035px;
+  line-height: 21.053px; }
   #demo .contents h3 {
     font-family: Arial, sans-serif;
     font-weight: normal;
@@ -51,9 +51,6 @@
     -webkit-box-orient: horizontal; }
   #demo .contents > div {
     background-color: #60B9CE;
-    width: 360px;
-    margin: 20px;
-    padding: 10px 0 0 0;
     border-radius: 5px; }
   #demo .contents > #editorconfig {
     -webkit-box-ordinal-group: 2;
@@ -72,7 +69,55 @@
     border-radius: 3px;
     background-color: #ffffff;
     resize: none;
-    margin: 10px 20px;
-    padding: 5px;
-    width: 310px;
     border: 0; }
+  #demo .contents > div {
+    width: 360px;
+    margin: 20px;
+    padding: 8px 0 0 0;
+    border-radius: 5px; }
+  #demo .contents input, #demo .contents textarea, #demo .contents pre {
+    margin: 8px 16px;
+    padding: 5px;
+    width: 318px; }
+  @media only screen and (min-width: 1200px) {
+    #demo .contents {
+      width: 1100px;
+      font-size: 19.298px;
+      line-height: 28.947px; }
+      #demo .contents > div {
+        width: 495px;
+        margin: 27.5px;
+        padding: 11px 0 0 0;
+        border-radius: 5px; }
+      #demo .contents input, #demo .contents textarea, #demo .contents pre {
+        margin: 11px 22px;
+        padding: 6.875px;
+        width: 437.25px; } }
+  @media only screen and (max-width: 900px) {
+    #demo .contents {
+      width: 700px;
+      font-size: 12.281px;
+      line-height: 18.421px; }
+      #demo .contents > div {
+        width: 315px;
+        margin: 17.5px;
+        padding: 7px 0 0 0;
+        border-radius: 5px; }
+      #demo .contents input, #demo .contents textarea, #demo .contents pre {
+        margin: 7px 14px;
+        padding: 4.375px;
+        width: 278.25px; } }
+  @media only screen and (max-width: 800px) {
+    #demo .contents {
+      width: 600px;
+      font-size: 10.526px;
+      line-height: 15.789px; }
+      #demo .contents > div {
+        width: 270px;
+        margin: 15px;
+        padding: 6px 0 0 0;
+        border-radius: 5px; }
+      #demo .contents input, #demo .contents textarea, #demo .contents pre {
+        margin: 6px 12px;
+        padding: 3.75px;
+        width: 238.5px; } }

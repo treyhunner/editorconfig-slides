@@ -1,13 +1,32 @@
 @import "_flex";
 
-#demo .contents {
-  $page-width: 800px;
-  $section-margin: 20px;
+@mixin page($page-width) {
+  $section-margin: $page-width / 40;
   $section-width: $page-width / 2 - $section-margin * 2;
-  $input-margin: 20px;
-  $input-padding: 5px;
+  $input-margin: $page-width / 50;
+  $input-padding: $page-width / 160;
+  $font-size: $page-width / 57;
 
-  font-size: 14px;
+  width: $page-width;
+  font-size: $font-size;
+  line-height: $font-size * 1.5;
+  > div {
+    width: $section-width;
+    margin: $section-margin;
+    padding: $input-margin/2 0 0 0;
+    border-radius: 5px;
+  }
+
+  input, textarea, pre {
+    $width: $section-width - ($input-padding + $input-margin) * 2;
+    margin: $input-margin/2 $input-margin;
+    padding: $input-padding;
+    width: $width;
+  }
+}
+
+#demo .contents {
+
   h3 {
     font-family: Arial, sans-serif;
     font-weight: normal;
@@ -15,8 +34,6 @@
     color: #ffffff;
     text-align: center;
   }
-  line-height: 20px;
-  width: $page-width;
   margin: 0 auto;
 
   @include flexbox;
@@ -24,9 +41,6 @@
 
   > div {
     background-color: #60B9CE;
-    width: $section-width;
-    margin: $section-margin;
-    padding: $input-margin/2 0 0 0;
     border-radius: 5px;
   }
   > #editorconfig { @include order(1); }
@@ -35,13 +49,20 @@
   input, textarea, pre {
     font-family: monospace,sans-serif;
     border-radius: 3px;
-    $width: $section-width - ($input-padding + $input-margin) * 2;
     background-color: #ffffff;
     resize: none;
-    margin: $input-margin/2 $input-margin;
-    padding: $input-padding;
-    width: $width;
     border: 0;
+  }
+
+  @include page(800px);
+  @media only screen and (min-width: 1200px) {
+    @include page(1100px);
+  }
+  @media only screen and (max-width: 900px) {
+    @include page(700px);
+  }
+  @media only screen and (max-width: 800px) {
+    @include page(600px);
   }
 
 }
