@@ -18,9 +18,7 @@ module.exports = function(grunt) {
             'core/deck.core.js',
             'extensions/hash/deck.hash.js',
             'extensions/menu/deck.menu.js',
-            'extensions/goto/deck.goto.js',
             'extensions/status/deck.status.js',
-            'extensions/navigation/deck.navigation.js',
             'extensions/scale/deck.scale.js',
             'scripts/demo.build.js'
           ]

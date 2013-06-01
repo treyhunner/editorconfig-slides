@@ -5,21 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Your deck.js Presentation</title>
+  <title>San Diego JavaScript Presentation: EditorConfig</title>
 
   <link rel="stylesheet" href="style.min.css">
-
   <script src="scripts/modernizr.custom.js"></script>
 </head>
 <body class="deck-container">
 
-<!-- Begin slides. Just make elements with a class of slide. -->
-
-<section class="slide">
+<section class="slide" id="title">
   <h1>EditorConfig</h1>
 </section>
 
-<section class="slide">
+<section class="slide" id="manifesto">
   <h2>The Manifesto</h2>
   <ul>
     <li>
@@ -37,7 +34,7 @@
   </ul>
 </section>
 
-<section class="slide">
+<section class="slide" id="solution">
   <h2>The Solution: EditorConfig</h2>
   <ol>
     <li>
@@ -55,10 +52,10 @@
   </ol>
 </section>
 
-<section class="slide demo">
+<section class="slide demo" id="demo">
   <h2>Example</h2>
 
-  <div id="demo">
+  <div class="contents">
     <div id="editorconfig">
       <h3>EditorConfig File</h3>
       <input name="filename" value="/home/trey/somewebsite/.editorconfig">
@@ -86,14 +83,6 @@ indent_size = 2</textarea>
     </div>
   </div>
 </section>
-<!-- End slides. -->
-
-
-<!-- Begin extension snippets. Add or remove as needed. -->
-
-<!-- deck.navigation snippet -->
-<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-<a href="#" class="deck-next-link" title="Next">&#8594;</a>
 
 <!-- deck.status snippet -->
 <p class="deck-status">
@@ -102,27 +91,14 @@ indent_size = 2</textarea>
   <span class="deck-status-total"></span>
 </p>
 
-<!-- deck.goto snippet -->
-<form action="." method="get" class="goto-form">
-  <label for="goto-slide">Go to slide:</label>
-  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-  <datalist id="goto-datalist"></datalist>
-  <input type="submit" value="Go">
-</form>
-
 <!-- deck.hash snippet -->
 <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
 
-<!-- End extension snippets. -->
-
-
 <script src="scripts/app.min.js"></script>
 
-<!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
-  $(function() {
-    $.deck('.slide');
-  });
+$(function() { $.deck('.slide'); });
 </script>
+
 </body>
 </html>
