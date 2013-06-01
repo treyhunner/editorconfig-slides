@@ -1,0 +1,47 @@
+@import "_flex";
+
+#demo {
+  $page-width: 800px;
+  $section-margin: 20px;
+  $section-width: $page-width / 2 - $section-margin * 2;
+  $input-margin: 20px;
+  $input-padding: 5px;
+
+  font-size: 14px;
+  h3 {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    text-shadow: none;
+    color: #ffffff;
+    text-align: center;
+  }
+  line-height: 20px;
+  width: $page-width;
+  margin: 0 auto;
+
+  @include flexbox;
+  @include flex-direction(row);
+
+  > div {
+    background-color: #60B9CE;
+    width: $section-width;
+    margin: $section-margin;
+    padding: $input-margin/2 0 0 0;
+    border-radius: 5px;
+  }
+  > #editorconfig { @include order(1); }
+  > #output { @include order(2); }
+
+  input, textarea, pre {
+    font-family: monospace,sans-serif;
+    border-radius: 3px;
+    $width: $section-width - ($input-padding + $input-margin) * 2;
+    background-color: #ffffff;
+    resize: none;
+    margin: $input-margin/2 $input-margin;
+    padding: $input-padding;
+    width: $width;
+    border: 0;
+  }
+
+}
