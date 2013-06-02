@@ -24,6 +24,9 @@
 		http://the-echoplex.net/flexyboxes/
 		http://msdn.microsoft.com/en-us/library/ie/hh772069%28v=vs.85%29.aspx
 */
+body {
+  cursor: url(small.cur), auto; }
+
 #demo .contents {
   margin: 0 auto;
   display: -webkit-box;
