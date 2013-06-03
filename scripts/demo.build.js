@@ -1670,7 +1670,48 @@ function regExpEscape (s) {
   )
 
 })(require("__browserify_process"))
-},{"path":5,"lru-cache":10,"sigmund":11,"__browserify_process":4}],10:[function(require,module,exports){
+},{"path":5,"sigmund":10,"lru-cache":11,"__browserify_process":4}],10:[function(require,module,exports){
+module.exports = sigmund
+function sigmund (subject, maxSessions) {
+    maxSessions = maxSessions || 10;
+    var notes = [];
+    var analysis = '';
+    var RE = RegExp;
+
+    function psychoAnalyze (subject, session) {
+        if (session > maxSessions) return;
+
+        if (typeof subject === 'function' ||
+            typeof subject === 'undefined') {
+            return;
+        }
+
+        if (typeof subject !== 'object' || !subject ||
+            (subject instanceof RE)) {
+            analysis += subject;
+            return;
+        }
+
+        if (notes.indexOf(subject) !== -1 || session === maxSessions) return;
+
+        notes.push(subject);
+        analysis += '{';
+        Object.keys(subject).forEach(function (issue, _, __) {
+            // pseudo-private values.  skip those.
+            if (issue.charAt(0) === '_') return;
+            var to = typeof subject[issue];
+            if (to === 'function' || to === 'undefined') return;
+            analysis += issue;
+            psychoAnalyze(subject[issue], session + 1);
+        });
+    }
+    psychoAnalyze(subject, 0);
+    return analysis;
+}
+
+// vim: set softtabstop=4 shiftwidth=4:
+
+},{}],11:[function(require,module,exports){
 (function(){;(function () { // closure for web browsers
 
 if (typeof module === 'object' && module.exports) {
@@ -1864,46 +1905,5 @@ function Entry (key, value, mru, len, age) {
 })()
 
 })()
-},{}],11:[function(require,module,exports){
-module.exports = sigmund
-function sigmund (subject, maxSessions) {
-    maxSessions = maxSessions || 10;
-    var notes = [];
-    var analysis = '';
-    var RE = RegExp;
-
-    function psychoAnalyze (subject, session) {
-        if (session > maxSessions) return;
-
-        if (typeof subject === 'function' ||
-            typeof subject === 'undefined') {
-            return;
-        }
-
-        if (typeof subject !== 'object' || !subject ||
-            (subject instanceof RE)) {
-            analysis += subject;
-            return;
-        }
-
-        if (notes.indexOf(subject) !== -1 || session === maxSessions) return;
-
-        notes.push(subject);
-        analysis += '{';
-        Object.keys(subject).forEach(function (issue, _, __) {
-            // pseudo-private values.  skip those.
-            if (issue.charAt(0) === '_') return;
-            var to = typeof subject[issue];
-            if (to === 'function' || to === 'undefined') return;
-            analysis += issue;
-            psychoAnalyze(subject[issue], session + 1);
-        });
-    }
-    psychoAnalyze(subject, 0);
-    return analysis;
-}
-
-// vim: set softtabstop=4 shiftwidth=4:
-
 },{}]},{},[1])
 ;
