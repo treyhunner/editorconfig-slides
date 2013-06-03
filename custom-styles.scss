@@ -53,7 +53,12 @@ body { cursor: url(small.cur), auto; }
     border-radius: 3px;
     background-color: #ffffff;
     resize: none;
-    border: 0;
+    border: 1px solid #60B9CE;
+    &:focus {
+      outline: none;
+      border-color: #287377;
+      background-color: #fdfff0;
+    }
   }
 
   @include page(800px);

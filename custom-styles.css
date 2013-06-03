@@ -72,7 +72,11 @@ body {
     border-radius: 3px;
     background-color: #ffffff;
     resize: none;
-    border: 0; }
+    border: 1px solid #60B9CE; }
+    #demo .contents input:focus, #demo .contents textarea:focus, #demo .contents pre:focus {
+      outline: none;
+      border-color: #287377;
+      background-color: #fdfff0; }
   #demo .contents > div {
     width: 360px;
     margin: 20px;
