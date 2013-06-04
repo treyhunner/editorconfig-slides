@@ -82,6 +82,38 @@ indent_size = 2</textarea>
   </div>
 </section>
 
+<section class="slide" id="usage-scenarios-1">
+  <h2>Alternative Usage Scenarios</h2>
+  <h3>Put a <tt>.editorconfig</tt> outside projects that don't use one.</h3>
+  <pre>[jshint/**.js]
+indent_style = tab
+
+[moment/**.js]
+indent_style = space
+indent_size = 4
+
+[jquery-pjax/**.js]
+indent_style = space
+indent_size = 2</pre>
+</section>
+
+<section class="slide" id="usage-scenarios-2">
+  <h2>Alternative Usage Scenarios</h2>
+  <h3>Put a <tt>.editorconfig</tt> file in your home directory</h3>
+  <pre>root = true  # no .editorconfig files above my home directory!
+
+[*.{rb,yml,html,css,scss,js}]
+indent_style = space
+indent_size = 2
+
+[*.{py,md,rst,sh,c,h}]
+indent_style = space
+indent_size = 4
+
+[Makefile]
+indent_style = tab</pre>
+</section>
+
 <section class="slide" id="libraries">
   <h2>Libraries and Tools</h2>
   <ul>
