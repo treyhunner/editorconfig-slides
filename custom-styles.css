@@ -24,10 +24,31 @@
 		http://the-echoplex.net/flexyboxes/
 		http://msdn.microsoft.com/en-us/library/ie/hh772069%28v=vs.85%29.aspx
 */
+.deck-status {
+  left: 20px; }
+
 body {
   cursor: url(small.cur), auto; }
 
-#demo .contents {
+.icon {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 20px;
+  right: 40px; }
+
+div.icon {
+  text-align: center;
+  width: 140px;
+  height: 140px; }
+
+.icon img, img.icon {
+  margin: 0;
+  padding: 0;
+  max-width: 140px;
+  max-height: 140px; }
+
+.slide .demo {
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -43,88 +64,88 @@ body {
   width: 800px;
   font-size: 13.333px;
   line-height: 20px; }
-  #demo .contents h3 {
+  .slide .demo h3 {
     font-family: Arial, sans-serif;
     font-weight: normal;
     text-shadow: none;
     color: #ffffff;
     text-align: center; }
-  #demo .contents else {
+  .slide .demo else {
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal; }
-  #demo .contents > div {
+  .slide .demo > div {
     background-color: #60B9CE;
     border-radius: 5px; }
-  #demo .contents > #editorconfig {
+  .slide .demo > #editorconfig {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -moz-order: 1;
     -ms-flex-order: 1;
     order: 1; }
-  #demo .contents > #output {
+  .slide .demo > #output {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
     -moz-order: 2;
     -ms-flex-order: 2;
     order: 2; }
-  #demo .contents input, #demo .contents textarea, #demo .contents pre {
+  .slide .demo input, .slide .demo textarea, .slide .demo pre {
     font-family: monospace,sans-serif;
     border-radius: 3px;
     background-color: #ffffff;
     resize: none;
     border: 1px solid #60B9CE; }
-    #demo .contents input:focus, #demo .contents textarea:focus, #demo .contents pre:focus {
+    .slide .demo input:focus, .slide .demo textarea:focus, .slide .demo pre:focus {
       outline: none;
       border-color: #287377;
       background-color: #fdfff0; }
-  #demo .contents > div {
+  .slide .demo > div {
     width: 360px;
     margin: 20px;
     padding: 8px 0 0 0;
     border-radius: 5px; }
-  #demo .contents input, #demo .contents textarea, #demo .contents pre {
+  .slide .demo input, .slide .demo textarea, .slide .demo pre {
     margin: 8px 16px;
     padding: 5px;
     width: 318px; }
   @media only screen and (min-width: 1200px) {
-    #demo .contents {
+    .slide .demo {
       width: 1100px;
       font-size: 18.333px;
       line-height: 27.5px; }
-      #demo .contents > div {
+      .slide .demo > div {
         width: 495px;
         margin: 27.5px;
         padding: 11px 0 0 0;
         border-radius: 5px; }
-      #demo .contents input, #demo .contents textarea, #demo .contents pre {
+      .slide .demo input, .slide .demo textarea, .slide .demo pre {
         margin: 11px 22px;
         padding: 6.875px;
         width: 437.25px; } }
   @media only screen and (max-width: 900px) {
-    #demo .contents {
+    .slide .demo {
       width: 700px;
       font-size: 11.667px;
       line-height: 17.5px; }
-      #demo .contents > div {
+      .slide .demo > div {
         width: 315px;
         margin: 17.5px;
         padding: 7px 0 0 0;
         border-radius: 5px; }
-      #demo .contents input, #demo .contents textarea, #demo .contents pre {
+      .slide .demo input, .slide .demo textarea, .slide .demo pre {
         margin: 7px 14px;
         padding: 4.375px;
         width: 278.25px; } }
   @media only screen and (max-width: 800px) {
-    #demo .contents {
+    .slide .demo {
       width: 600px;
       font-size: 10px;
       line-height: 15px; }
-      #demo .contents > div {
+      .slide .demo > div {
         width: 270px;
         margin: 15px;
         padding: 6px 0 0 0;
         border-radius: 5px; }
-      #demo .contents input, #demo .contents textarea, #demo .contents pre {
+      .slide .demo input, .slide .demo textarea, .slide .demo pre {
         margin: 6px 12px;
         padding: 3.75px;
         width: 238.5px; } }

@@ -1,5 +1,7 @@
 @import "_flex";
 
+.deck-status { left: 20px; }
+
 @mixin page($page-width) {
   $section-margin: $page-width / 40;
   $section-width: $page-width / 2 - $section-margin * 2;
@@ -27,7 +29,24 @@
 
 body { cursor: url(small.cur), auto; }
 
-#demo .contents {
+.icon {
+  margin: 0; padding: 0;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+div.icon {
+  text-align: center;
+  width: 140px;
+  height: 140px;
+}
+.icon img, img.icon {
+  margin: 0; padding: 0;
+  max-width: 140px;
+  max-height: 140px;
+}
+
+.slide .demo {
 
   h3 {
     font-family: Arial, sans-serif;
