@@ -30,6 +30,11 @@
 body {
   cursor: url(small.cur), auto; }
 
+.editors {
+  float: right;
+  max-height: 75%;
+  max-width: 75%; }
+
 .icon {
   margin: 0;
   padding: 0;
