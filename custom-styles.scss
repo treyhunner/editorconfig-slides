@@ -29,6 +29,13 @@
 
 body { cursor: url(small.cur), auto; }
 
+footer {
+  position: absolute;
+  bottom: 1.5em;
+  width: 100%;
+  text-align: center;
+}
+
 .editors {
   float: right;
   max-height: 75%;
