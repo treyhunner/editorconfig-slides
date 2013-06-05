@@ -29,9 +29,18 @@
   }
 
   // Update output automatically
-  $('input, textarea').on('input', function (event) {
+  $('input, textarea').on('input', function () {
     renderOutput(createFiles());
   }).trigger('input');
+
+  $('.demo-link').click(function() {
+    $('#editorconfig input').val($(this).siblings('input').val());
+    $('#editorconfig textarea')
+      .val($(this).siblings('pre').text())
+      .trigger('input');
+    $.deck('go', 'demo');
+    return false;
+  });
 
 }(jQuery));
 
